@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let money = prompt("Hãy nhập vào số tiền cần vay: ");
+        alert("Số tiền cần vay là: " + money + "(VNĐ)");
+
+        let interestRate = prompt("Hãy nhập vào lãi suất mong muốn: ");
+        alert("Bạn đã lựa chọn lãi suất là: " + interestRate + "(%)");
+
+        let year = prompt("Hãy nhập vào số năm vay: ");
+        alert("Thời gian để trả hết khoản nợ là: " + year + "(năm)");
+        
+        
+        let count = money + (money*interestRate)*year ;
+        alert("Số tiền bạn phải trả sau " + year + " năm là : " + count + "(VNĐ)");
+        
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
