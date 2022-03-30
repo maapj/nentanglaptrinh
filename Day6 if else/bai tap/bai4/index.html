@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tính chỉ số của cơ thể</h1>
+    <form action="#">
+        <table>
+            <tr>
+                <td><label for="height">Nhập vào chiều cao của bạn</label></td>
+                <td><input type="text" id="height"></td>
+            </tr>
+            <tr>
+                <td><label for="weight">Nhập vào cân nặng của bạn</label></td>
+                <td><input type="text" id="weight"></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="showBMI();">Kiểm Tra chỉ số cơ thể</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function showBMI(){
+            let height = document.getElementById("height").value;
+            let weight = document.getElementById("weight").value;
+
+            let showBMI = ( +weight / (+height*2) );
+
+            if(showBMI < 16){
+                alert("Gầy độ III");
+            } else if (16 <= showBMI && showBMI< 17){
+                alert("Gầy độ II");
+            } else if (17 <= showBMI && showBMI < 18.5){
+                alert("Gầy độ I");
+            } else if (18.5 <= showBMI && showBMI < 25){
+                alert("Bình thường");
+            } else if (25 <= showBMI && showBMI < 30){
+                alert("Thừa cân");
+            } else if (30 <= showBMI && showBMI < 35){
+                alert("Béo phì độ I");
+            } else if (35 <= showBMI && showBMI < 40){
+                alert("Béo phì độ II");
+            } else if (showBMI > 40) {
+                alert("Béo phì độ III");
+            } else {
+                alert("Không có thông tin. Hãy nhập lại: ");
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

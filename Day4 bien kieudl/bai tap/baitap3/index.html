@@ -9,17 +9,17 @@
 <body>
     
     <script>
-        let money = prompt("Hãy nhập vào số tiền cần vay: ");
+        let money = parseFloat( prompt("Hãy nhập vào số tiền cần vay: "));
         alert("Số tiền cần vay là: " + money + "(VNĐ)");
 
-        let interestRate = prompt("Hãy nhập vào lãi suất mong muốn: ");
+        let interestRate = parseFloat( prompt("Hãy nhập vào lãi suất mong muốn: "));
         alert("Bạn đã lựa chọn lãi suất là: " + interestRate + "(%)");
 
-        let year = prompt("Hãy nhập vào số năm vay: ");
+        let year = parseFloat( prompt("Hãy nhập vào số năm vay: "));
         alert("Thời gian để trả hết khoản nợ là: " + year + "(năm)");
         
         
-        let count = money + (money*interestRate)*year ;
+        let count = money + (money*(interestRate/100))*year ;
         alert("Số tiền bạn phải trả sau " + year + " năm là : " + count + "(VNĐ)");
         
 

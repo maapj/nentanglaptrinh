@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <button type="button" onclick="guess();">Nhấp vào để bắt đầu trò chơi</button>
+    </form>
+
+    <script>
+        function guess() {
+            alert("Hãy nhập vào giới hạn mà bạn muốn!!");
+            let min = parseInt(prompt("Bắt đầu từ số: "));
+            let max = parseInt(prompt("Kết thúc ở số: "));
+
+            let a = parseInt(prompt("Nhập vào số bạn dự đoán: "));
+
+            let spin = parseInt(min + Math.round(Math.random() * max));
+
+            if (a == spin) {
+                alert("Bạn đã đoán chính xác!! Chúc mừng bạn.");
+            } else if (a < spin) {
+                alert("Số của bạn nhỏ hơn số bí ẩn");
+            } else {
+                alert("Số của bạn lớn hơn số bí ẩn");
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

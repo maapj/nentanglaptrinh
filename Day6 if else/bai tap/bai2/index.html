@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tính điểm ĐH khối D</h1>
+
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td><span>Môn Toán</span></td>
+                <td><input type="text" id="pointToan"></td>
+            </tr>
+            <tr>
+                <td><span>Môn Văn</span></td>
+                <td><input type="text" id="pointVan"></td>
+            </tr>
+            <tr>
+                <td><span>Môn Anh</span></td>
+                <td><input type="text" id="pointAnh"></td>
+            </tr>
+            <tr>
+                <td><span>Khu Vực</span></td>
+                <td>
+                    <select id="checkLock" name="check">
+                        <option value="kv1">KV1</option>
+                        <option value="kv2">KV2</option>
+                        <option value="kv2-nt">KV2-NT</option>
+                        <option value="kv3">KV3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="sumKhoiD();">Tính điểm</button></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+    <h1 id="result"></h1>
+
+    <script>
+        function sumKhoiD() {
+            let pointToan = document.getElementById("pointToan").value;
+            let pointVan = document.getElementById("pointVan").value;
+            let pointAnh = document.getElementById("pointAnh").value;
+
+            let checkLock = document.getElementById("checkLock").value;
+            console.log(checkLock + pointAnh);
+
+            let sumKhoiD;
+
+            switch (checkLock) {
+                case "kv1":
+                    sumKhoiD = +pointToan + +pointAnh + +pointVan + 0.75; break;
+                case "kv2":
+                    sumKhoiD = +pointToan + +pointAnh + +pointVan + 0.5; break;
+                case "kv2-nt":
+                    sumKhoiD = +pointToan + +pointAnh + +pointVan + 0.25; break;
+                default:
+                    sumKhoiD = +pointToan + +pointAnh + +pointVan; break;
+            }
+
+            let result = document.getElementById("result").innerHTML = "Tổng điểm ĐH khối D của bạn là: " + sumKhoiD;
+        }
+    </script>
+
+
+</body>
+
+</html>

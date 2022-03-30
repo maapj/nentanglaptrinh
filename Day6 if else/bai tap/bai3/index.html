@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Tính Ngày của Tháng trong Năm</h1>
+    <form action="#">
+        <input type="text" id="months">
+        <button type="button" onclick="checkDays();">Tính Ngày</button>
+    </form>
+    <h1 id="result"></h1>
+
+    <script>
+        function checkDays() {
+            let months = document.getElementById("months").value;
+            let days;
+            if (0 < months < 13) {
+                switch (months) {
+                    case "1":
+                    case "3":
+                    case "5":
+                    case "7":
+                    case "8":
+                    case "10":
+                    case "12":
+                        days = 31; break;
+
+                    case "4":
+                    case "6":
+                    case "9":
+                    case "11":
+                        days = 30; break;
+
+                    case "2":
+                        days = 29; break;
+
+                    default:
+                        alert("Không có tháng " + months + " trong năm!!! Hãy nhập lại tháng mới: ")
+                }
+                let result = document.getElementById("result").innerHTML = "Số ngày của tháng " + months + " là: " + days + " ngày";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

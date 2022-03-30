@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#">
+        <h1>Kiểm tra năm nhuận???</h1>
+        <input type="text" id="years">
+        <button type="button" onclick="showYear();">Kiểm Tra Năm Nhuận</button>
+    </form>
+
+    <script>
+        function showYear() {
+            let numberYear = document.getElementById("years");
+            let numberYearLock = numberYear.value;
+
+            while(numberYearLock < 0 || numberYearLock > 10000 ){
+                numberYearLock = prompt("Nhập lại số khác: ");
+            }
+            if (numberYearLock % 4 == 0) {
+                if (numberYearLock % 100 == 0) {
+                    if (numberYearLock % 400 == 0) {
+                        alert(numberYearLock + " là năm nhuận");
+                    } else {
+                        alert(numberYearLock + " không phải là năm nhuận");
+                    }
+                } else {
+                    alert(numberYearLock + " là năm nhuận");
+                }
+            } else {
+                alert(numberYearLock + " không phải là năm nhuận");
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

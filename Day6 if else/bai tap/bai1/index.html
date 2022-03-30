@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Giá Hoa Quả</h1>
+    <form action="#">
+        <input type="text" id="user">
+        <button type="button" onclick="check();">Xem Giá</button>
+    </form>
+
+    <script>
+        function check() {
+            let name = document.getElementById("user").value;
+            switch (name) {
+                case "Ổi":
+                    alert("Giá của " + name + " là: 20000 VNĐ/kg"); break;
+                case "Dưa Hấu":
+                    alert("Giá của " + name + " là: 20000 VNĐ/kg"); break;
+                case "Táo":
+                    alert("Giá của " + name + " là: 30000 VNĐ/kg"); break;
+                case "Xoài":
+                    alert("Giá của " + name + " là: 30000 VNĐ/kg"); break;
+                case "Cam":
+                    alert("Giá của " + name + " là: 40000 VNĐ/kg"); break;
+                case "Chôm Chôm":
+                    alert("Giá của " + name + " là: 40000 VNĐ/kg"); break;
+                case "Măng Cụt":
+                    alert("Giá của " + name + " là: 50000 VNĐ/kg"); break;
+                
+                default:
+                    alert("Không có sản phầm này!!!");
+
+            }
+        }
+    </script>
+</body>
+
+</html>
