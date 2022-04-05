@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>luyện tập</title>
+</head>
+
+<body>
+
+    <script>
+        let arr = [1, 2, 3, 4, 5, 5, 5, 7, 8, 9, 10, 14, 17];
+        let sum = 0;
+        let max = arr[0];
+        let min = arr[0];
+
+        // in ra các phần tử có ở trong mảng
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + " ");
+        }
+        document.write("<br>");
+
+        // in ra các phần tử có trong mảng là số chẵn
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                document.write(arr[i] + " ");
+            }
+        }
+        document.write("<br>");
+
+        // // tính tổng các phần tử trong mảng (tính tổng phải có thêm biến sum hỗ trợ)
+        // for(let i = 0; i < arr.length; i++){
+        //     sum += arr[i];
+        // }
+        // document.write("tổng các số trong mảng là: " + sum);
+        // document.write("<br>");
+
+        // // tính tổng các phẩn tử lẻ trong mảng
+        // for(let i = 0; i < arr.length; i++){
+        //     if(arr[i] % 2 != 0){
+        //         sum += arr[i];
+        //     }
+        // }
+        // document.write("tổng các số lẻ trong mảng là: " + sum);
+        // document.write("<br>");
+
+        // // tìm số lớn nhất trong mảng (tính max phải có thêm biến max hỗ trợ)
+        for (let i = 0; i < arr.length; i++){
+            if(arr[i] >= max){
+                max = arr[i];
+            }
+        }
+        document.write("Số lớn nhất trong mảng là: " + max);
+        document.write("<br>");
+
+        // // tìm số bé nhất trong mảng (tính min phải có thêm biến min hỗ trợ)
+        for (let i = 0; i < arr.length; i++){
+            if(arr[i] <= min){
+                min = arr[i];
+            }
+        }
+        document.write("Số lớn nhất trong mảng là: " + min);
+        document.write("<br>");
+
+        // nhập vào x , tìm vị trí của x ở trong mảng. Nếu ko có trả về giá trị -1
+        let x = +prompt("Nhập vào số x cần tìm vị trí trong mảng: ");
+        let indexOfX = -1;
+        for (let i = 0; i < arr.length; i++){
+            if (arr[i] === x ){
+                indexOfX = i;
+            }
+        }
+        if(indexOfX == -1){
+            alert("Không phát hiện số " + x + " trong mảng !!!");
+        }
+        document.write("vị trí của x trong mảng là: " + indexOfX);
+        document.write("<br>");
+
+        // đếm xem có bao nhiều phẩn tử bằng x có ở trong mảng
+        let count = 0;
+        for (let i = 0; i < arr.length; i++){
+            if (arr[i] === x){
+                count++;
+            }
+        }
+        document.write("có " + count + " số " + x + " trong mảng !!!");
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

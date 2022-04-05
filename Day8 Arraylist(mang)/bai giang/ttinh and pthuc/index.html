@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and opretor</title>
+</head>
+
+<body>
+
+    <script>
+        let studentArr = [1, 2, 3, 4, 5, 6];
+        document.write(studentArr + "<br>");
+        // length
+        alert(studentArr.length);
+
+        // push() thêm phần tử vào mảng: + vào Cuối mảng.
+        studentArr.push(9);
+        document.write(studentArr + "<br>");
+
+        // length thêm phần tử vào mảng:
+        studentArr[studentArr.length] = 11;
+        document.write(studentArr + "<br>");
+
+        // join() chuyển tất cả phần tử của mảng thành chuỗi rồi nối lại vs nhau
+        document.write(studentArr.join(" ") + "<br>");
+
+        // reverse đảo ngược các phần tử trong mảng 1,2,3 => 3,2,1;
+        document.write(studentArr.reverse().join(" ") + "<br>");
+
+        // sort sắp xếp mảng theo a->z || 
+        document.write(studentArr.sort().join(" ") + "<br>"); // vì sắp xếp dưới dạng chuỗi nên lỗi xảy ra khi sx số
+        // sort function(a,b){return a-b} sắp xếp tăng dần 1 2 3 4 6 8 11;
+        document.write(studentArr.sort(function (a, b) { return a - b }).join(" ") + "<br>");
+        // sort function(a,b){return b-a} sắp xếp giảm dần 11 8 6 4 3 2 1;
+        document.write(studentArr.sort(function (a, b) { return b - a }).join(" ") + "<br>");
+
+        // shift() xóa phần tử vào đầu mảng
+        document.write(studentArr.shift());
+        // unshift thêm phần tử mới vào đầu mảng
+        document.write(studentArr.unshift(213));
+
+    </script>
+
+
+
+</body>
+
+</html>

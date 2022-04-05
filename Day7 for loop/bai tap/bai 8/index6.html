@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const Min = 1;
+        const Max = 100;
+
+        // CÁCH 1--------
+        // for (let i = Min; i <= Max; i++) {
+        //     switch (true) {
+        //         case i % 3 == 0 && i % 5 == 0:
+        //             console.log("FizzBuzz");
+        //             break;
+        //         case i % 3 == 0 && i % 5 != 0:
+        //             console.log("Fizz");
+        //             break;
+        //         case i % 5 == 0:
+        //             console.log("Buzz");
+        //             break;
+        //         default:
+        //             console.log(i);
+        //             break;
+        //     }
+        // }
+
+
+        // CÁCH 2--------
+        // for (let i = Min; i <= Max; i++) {
+        //     console.log(i % 3 == 0 && i % 5 == 0 ? "FizzBuzz" :
+        //         i % 3 == 0 ? "Fizz" :
+        //         i % 5 == 0 ? "Buzz" : i);
+        // }
+
+        // CÁCH 3---------
+        let a = "";
+        for (let i = Min; i<=Max; i++){
+            if (i % 3 == 0 || i % 5 == 0) {
+                if (i % 3 == 0) {
+                    a += "Fizz ";
+                }
+                if (i % 5 == 0) {
+                    a += "Buzz ";
+                }
+                a += "<br>";
+            }
+            else {
+                a += i + "<br>";
+            }
+        }
+        document.write(a);
+
+    </script>
+
+
+
+
+</body>
+
+</html>
