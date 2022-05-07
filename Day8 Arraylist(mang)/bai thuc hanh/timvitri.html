@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let arr = [1, 2, 3, 4, 5, 5, 5, 7, 8, 9, 10, 14, 17];
+        let x = +prompt("Nhập vào số x cần tìm vị trí trong mảng: ");
+        let indexOfX = -1;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === x) {
+                indexOfX = i;
+            }
+        }
+        if (indexOfX == -1) {
+            alert("Không phát hiện số " + x + " trong mảng !!!");
+        }
+        document.write("vị trí của x trong mảng là: " + indexOfX);
+        document.write("<br>");
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="feets">
+    <button type="button" onclick="showMeter();">chuyển đổi và hiển thị</button>
+    <div id="result"></div>
+
+    <script>
+
+        function feetToMeter(f){
+            return (f * 0.305);
+        }
+
+        function showMeter(){
+            let feetValue = document.getElementById("feets").value;
+            let meterValue = feetToMeter(feetValue);
+            document.getElementById("result").innerHTML = meterValue;
+        }
+
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class MobilePhone{
+            constructor(manName,model,color,year,guaranteed){
+                this.manName = manName;
+                this.model = model;
+                this.color = color;
+                this.year = year;
+                this.guaranteed = guaranteed;
+            }
+            getAge(){
+                let now = new Date();
+                return now.getFullYear() - this.year;
+            }
+            setColor(newcolor){
+                this.color = newcolor;
+            }
+        }
+
+        let nokia = new MobilePhone("Nokia" , "1050", "black", "1990", true);
+
+        // console.log(nokia);
+        nokia.setColor("Blue");
+        console.log(nokia);
+
+
+
+    </script>
+
+
+    
+</body>
+</html>

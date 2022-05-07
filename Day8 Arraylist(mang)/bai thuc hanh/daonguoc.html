@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let x = [-3, 5, 1, 3, 2, 10];
+        let temp = [];
+
+        for(let i = x.length -1; i >= 0;i--){
+            temp.push(x[i]);
+        }
+        document.write(x);
+        document.write("<br>");
+        document.write(temp);
+
+        let tempTwo = [];
+        for(let i = 0; i < x.length ;i++){
+            tempTwo.unshift(x[i]);
+        }
+        document.write("<br>");
+        document.write(tempTwo);
+
+
+    </script>
+
+
+</body>
+</html>

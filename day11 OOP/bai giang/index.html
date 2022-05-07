@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Person{
+            constructor(name, birthYear, gender, email, tel, address){
+                this.name = name;
+                this.birthYear = birthYear;
+                this.gender = gender;
+                this.email = email;
+                this.tel = tel;
+                this.address = address;
+
+            }
+            getAge(){
+                let now = new Date();
+                return now.getFullYear() - this.birthYear;
+            }
+        }
+
+        let hoang = new Person("hoang", 2002, "nam", "20t1020383@husc.edu.vn", "0708200216", "Thừa thiên huế");
+        console.log( hoang.Person);
+
+    </script>
+
+
+</body>
+</html>

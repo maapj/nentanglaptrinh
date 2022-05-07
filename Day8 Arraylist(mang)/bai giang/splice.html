@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arr = ["code", "gym", "vn"];
+        document.write(arr + "<br>");
+        arr.splice(2,1,"chào các bạn"); // splice( vị trí bắt đầu, số phần tử sẽ xóa, add elements );
+        document.write(arr + "<br>");
+
+        let students = [
+            {
+                id: 1,
+                name: "Tran quang Hoang",
+                address: "Trần Phú",
+            },
+            {
+                id: 2,
+                name: "Le Thi Ngoc Tran",
+                address: "Lý Thái Tổ",
+            },
+            {
+                id: 3,
+                name: "Nguyen Van Quoc Khanh",
+                address: "Nguyễn Tất Thành",
+            },
+        ];
+        console.log(students);
+
+        for( let i = 0; i<students.length; i++){
+            if(students[i].id == 2){
+                students.splice(i,1);
+            }
+        }
+        console.log(students);
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sample Screen:</h1>
+    <input type="text" id="addElements">
+    <button type="button" onclick="addElements();">Add Elements</button>
+    <button type="button" onclick="display();">Display</button>
+    <hr>
+    <div id="result"></div>
+
+
+
+    <script>
+        let x = 0;
+        let array = [];
+
+        function addElements() {
+            array[x] = document.getElementById("addElements").value;
+            alert("Đã thêm phần tử " + array[x] + " vào bộ nhớ!!!");
+            x++;
+            document.getElementById("addElements").value = "";
+        }
+
+        function display() {
+            let e = "";
+            for (let i = 0; i < array.length; i++) {
+                e += "Element " + i + " = " + array[i] + "<br/>";
+            }
+            document.getElementById("result").innerHTML = e;
+        }
+
+        
+    </script>
+
+
+</body>
+
+</html>
